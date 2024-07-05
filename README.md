@@ -1,101 +1,60 @@
-# Online Retail Database System
+# Online Retail Store Database System
 
 ## Overview
 
-This project entails the design and development of a comprehensive database system for an online retail business. The system includes a robust back-end for user authentication, querying, and data insertion into a SQL database, along with a user-friendly Command Line Interface (CLI) to facilitate interaction with the system.
+This project involves the development of a database system for an online retail store, designed to cater to different types of users: admin, customer, and delivery person. The system facilitates various operations such as user authentication, product management, order processing, and delivery tracking through a command-line interface (CLI).
 
 ## Features
 
-### Back-End System Implementation
-- **User Authentication:** Secure login mechanisms utilizing hashed password storage.
-- **Product Management:** Efficient querying and display of products, allowing users to browse and search the catalog.
-- **Order Processing:** Facilitates order placement, updates inventory levels, and generates order confirmations.
-- **Data Integrity:** Ensures consistency and integrity of database operations with transaction management for concurrent accesses.
+### Admin Functions
+- **Login:** Secure authentication for admins.
+- **Add Products:** Insert new products into the database.
+- **Delete Out of Stock Products:** Remove products marked as "Not Available."
+- **Update Product Price:** Modify the price of existing products.
+- **View Customer Accounts:** Display all registered customer accounts.
+- **View Products:** List all available products.
+- **View Successful Orders:** Display orders that have been successfully paid for.
+- **Update Stock Quantity:** Modify the stock quantity of a specific product.
+- **View Delivery Persons:** List all registered delivery persons.
 
-### Command Line Interface (CLI) Development
-- **User Login:** Secure user authentication via the CLI.
-- **Product Search:** Allows users to search for products based on various criteria.
-- **Order Placement:** Users can place orders and view order history.
-- **Error Handling:** Built-in mechanisms to guide users and prevent invalid operations.
+### Customer Functions
+- **Create Account:** Register a new customer account.
+- **Login:** Secure authentication for customers.
+- **Browse Products:** Display all available products.
+- **Add to Cart:** Add products to the shopping cart.
+- **Delete from Cart:** Remove products from the shopping cart.
+- **View Cart:** Display the contents of the shopping cart.
+- **View Orders:** List all orders placed by the customer.
+- **View Payments:** Display payment information for orders.
+
+### Delivery Person Functions
+- **Create Account:** Register a new delivery person account.
+- **Login:** Secure authentication for delivery persons.
+- **View Assigned Orders:** Display orders assigned to the delivery person.
 
 ## System Architecture
 
 ### Database Schema
-- **Users:** Stores user information and hashed passwords.
-- **Products:** Contains product details, including inventory levels.
-- **Orders:** Records order information and associated user details.
+- **Admin:** Stores admin credentials.
+- **User:** Stores customer information and credentials.
+- **Product:** Contains product details including price, category, status, and stock units.
+- **Order:** Records order information and associated customer details.
+- **Payment:** Manages payment details and status.
+- **DeliveryPerson:** Stores delivery person information and credentials.
 
 ### SQL Implementation
-- **Complex Queries:** Efficient data manipulation for user login, product search, order placement, and inventory management.
-- **Normalization:** Ensures data integrity and eliminates redundancy.
+- **MySQL Database:** Used to store and manage all the data.
+- **Complex Queries:** Handle data retrieval and manipulation efficiently.
 
-### CLI
-- **User-Friendly Interface:** Clear instructions and feedback for user actions.
-- **Comprehensive Features:** Login, search, order placement, and error handling.
+### Command Line Interface (CLI)
+- **User-Friendly Interface:** Provides clear options and feedback for user actions.
+- **Comprehensive Features:** Allows different types of users to perform relevant operations.
 
-## Optimization and Scalability
-- **Query Performance:** Optimized indexes for quick data retrieval.
-- **Scalability:** Designed to handle increasing numbers of users and expanding product listings.
+## Code Structure
 
-## Documentation and Testing
-- **Documentation:** Detailed documentation of the database schema, system architecture, and CLI usage instructions.
-- **Testing:** Extensive testing for functionality, reliability, and security.
+### `main.py`
+The main script containing the CLI logic for interacting with the database.
 
-## Getting Started
+### `database.sql`
+The SQL script to set up the database schema and initial data.
 
-### Prerequisites
-- **SQL Database:** Ensure you have a SQL database set up.
-- **C++ Compiler:** To compile and run the CLI.
-- **Git:** For version control.
-
-### Installation
-
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/yourusername/online-retail-database-system.git
-    ```
-
-2. **Navigate to the project directory:**
-    ```bash
-    cd online-retail-database-system
-    ```
-
-3. **Set up the database:**
-    - Import the provided SQL schema to your database.
-
-4. **Compile the CLI:**
-    ```bash
-    g++ -o retail_system main.cpp
-    ```
-
-5. **Run the CLI:**
-    ```bash
-    ./retail_system
-    ```
-
-### Usage
-
-- **Login:**
-  - Enter your username and password to log in.
-  
-- **Product Search:**
-  - Use search commands to find products by various criteria.
-
-- **Order Placement:**
-  - Place orders and view your order history.
-
-## Contributing
-
-We welcome contributions! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-- Thanks to everyone who contributed to this project.
-
----
-
-This README provides a comprehensive overview of the project, instructions for getting started, and additional information to help users understand and contribute to the project.
