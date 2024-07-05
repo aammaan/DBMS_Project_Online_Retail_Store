@@ -55,6 +55,6 @@ This project involves the development of a database system for an online retail 
 ### `main.py`
 The main script containing the CLI logic for interacting with the database.
 
-### `database.sql`
+### `131_Assignment-3_2021010(FINAL).sql`
 The SQL script to set up the database schema and initial data.
 
